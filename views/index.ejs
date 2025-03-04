@@ -1,13 +1,234 @@
 <%- include('partials/header_cardapio.ejs') %>
+    <main>
+        <section class="mx-4 md:mx-[40px] mt-10">
+            <div class="flex justify-center py-5 border-b-2 flex-col items-center justify-center">
+                <h5 class="text-3xl text-orange-500 font-bold">Pizzaria Família Delivery</h5>
+                <p class="text-sm text-gray-500">Apenas delivery</p>
+            </div>
 
-    <div class="mx-4 md:mx-[40px]">
-        <div class="flex justify-center py-5 border-b-2">
-            <h5 class="text-2xl text-orange-500 font-bold">Cardápio de pizza</h5>
+            <div class="mt-10 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Endereço para retirada -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-row gap-2">
+                        <i class="material-icons-outlined text-orange-500">location_on</i>
+                        <p>Endereço para retirada:</p>
+                    </div>
+                    <p class="ml-1">Rua Hélio Beloni, 394 – Jardim Dolores</p>
+                </div>
+            
+                <!-- Taxa de entrega -->
+                <div class="flex flex-row gap-2">
+                    <div class="flex flex-row gap-2">
+                        <i class="material-icons-outlined text-orange-500">two_wheeler</i>
+                        <p>Taxa de entrega:</p>
+                    </div>
+                    <p class="ml-1">R$ 8,00</p>
+                </div>
+            
+                <!-- Horário de funcionamento -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-row gap-2">
+                        <i class="material-icons-outlined text-orange-500">schedule</i>
+                        <p>Horário de funcionamento:</p>
+                    </div>
+                    <p class="ml-1">Sexta a domingo 19:30h às 23:30h</p>
+                </div>
+            
+                <!-- Formas de pagamento -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-row gap-2">
+                        <i class="material-icons-outlined text-orange-500">credit_card</i>
+                        <p>Formas de pagamento:</p>
+                    </div>
+                    <p class="ml-1">Dinheiro, pix e cartão</p>
+                </div>
+            </div>
+            
+        </section>
+        <section class="mt-20">
+
+            <div class="flex justify-center py-5 border-b-2">
+                <h5 class="text-2xl text-orange-500 font-bold">Cardápio de pizza</h5>
+            </div>
+        </section>
+
+        <div class="w-full mx-auto bg-white p-5 rounded-lg shadow-lg ">
+            <!-- Tabs (Cabeçalho) -->
+            <div class="flex border-b justify-around">
+                <button
+                    class="tab-btn py-2 px-4 text-gray-600 hover:text-blue-500 border-b-2 border-transparent focus:border-blue-500 focus:outline-none focus:ring-0"
+                    data-tab="tab1">PIZZA SALGADA</button>
+                <button
+                    class="tab-btn py-2 px-4 text-gray-600 hover:text-blue-500 border-b-2 border-transparent focus:border-blue-500 focus:outline-none focus:ring-0"
+                    data-tab="tab2">PIZZA DOCE</button>
+                <button
+                    class="tab-btn py-2 px-4 text-gray-600 hover:text-blue-500 border-b-2 border-transparent focus:border-blue-500 focus:outline-none focus:ring-0"
+                    data-tab="tab3">COMBOS</button>
+
+            </div>
+
+            <!-- Conteúdo das Tabs -->
+            <div class="p-5">
+                <div id="tab1" class="tab-content grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="Pizza Presunto" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">01 - Pizza Presunto</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="2 - Pizza Batata" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">02 - Pizza Batata</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab2" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/doce.jpeg" alt="Pizza Presunto" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">03 - Pizza de Morango</p>
+                            <p>Brigadeiro, morango</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/doce.jpeg" alt="Pizza Presunto" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">04 - Pizza de Morango</p>
+                            <p>Brigadeiro, morango</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="tab3" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="Pizza Presunto" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">05 - Pizza Presunto + 1 Refri</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-between p-4">
+                        <!-- Imagem -->
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="Pizza Presunto" class="w-full h-auto rounded-lg">
+                        </div>
+
+                        <!-- Descrição e preço -->
+                        <div class="flex-1 pl-4">
+                            <p class="text-lg font-bold">06 - Pizza Bacon + 1 Refri</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 40,00</p>
+                        </div>
+
+                        <!-- Botão adicionar -->
+                        <div class="mt-auto">
+                            <button
+                                class="flex items-center text-orange-500 bg-transparent border-0 focus:outline-none">
+                                <i class="material-icons text-5xl">add_box</i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
-        <div>
+        <!-- Script para alternar abas -->
+        <script>
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove classe ativa de todas as abas
+                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('border-blue-500', 'text-blue-500'));
+                    button.classList.add('border-blue-500', 'text-blue-500');
 
-        </div>
-    </div>
+                    // Ocultar todas as abas e exibir a clicada
+                    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+                    document.getElementById(button.getAttribute('data-tab')).classList.remove('hidden');
+                });
+            });
+        </script>
 
-<%- include('partials/footer.ejs') %>
+    </main>
+
+    <%- include('partials/footer.ejs') %>

@@ -1,0 +1,106 @@
+<%- include('partials/header_pedido.ejs') %>
+
+    <main>
+        <div class="mx-4 md:mx-[40px]">
+            <div class="flex justify-center py-5 border-b-2 flex-col items-center justify-center">
+                <h5 class="text-3xl text-orange-500 font-bold">Pedido 01</h5>
+            </div>
+
+            <section class="flex justify-center items-center p-5 w-full  md:w-1/2  mx-auto">
+                <div class="w-full">
+                    <div class="tab-content grid grid-cols-1 gap-4 border rounded-lg w-full shadow-xl">
+                        <div>
+                            <div class="flex flex-row items-center justify-center p-4">
+                                <!-- Imagem -->
+                                <div class="w-40 md:w-48">
+                                    <img src="/img/pizza.jpeg" alt="2 - Pizza Batata" class="w-full h-auto rounded-lg">
+                                </div>
+                                <!-- Descrição e preço -->
+                                <div class="flex-1 text-center md:text-left pl-4 eading-normal md:leading-[3]">
+
+                                    <p class="text-xl font-bold">02 - Pizza Batata</p>
+                                    <p>Presunto, mussarela, orégano, molho, cebola</p>
+                                    <p class="text-xl text-orange-500 font-bold">R$ 40,00</p>
+                                </div>
+                            </div>
+
+                            <div class="border p-4 w-full">
+                                <p class="text-center font-semibold py-6">Escolha os adicionais (opcional):</p>
+
+                                <div class="space-y-4">
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-center gap-5">
+                                            <img src="/img/bacon.png" alt="" class="w-12 h-12">
+                                            <div>
+                                                <p>Adicional Bacon</p>
+                                                <p class="text-xl text-orange-500 font-bold">R$ 5,00</p>
+                                            </div>
+                                        </div>
+                                        <!-- Botão adicionar -->
+                                        <button class="text-orange-500 bg-transparent border-0 focus:outline-none">
+                                            <i class="material-icons text-5xl hover:text-orange-600">add_box</i>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-center gap-5">
+                                            <img src="/img/cheddar.png" alt="" class="w-12 h-12">
+                                            <div>
+                                                <p>Adicional Cheddar</p>
+                                                <p class="text-xl text-orange-500 font-bold">R$ 5,00</p>
+                                            </div>
+                                        </div>
+                                        <!-- Botão adicionar -->
+                                        <button class="text-orange-500 bg-transparent border-0 focus:outline-none">
+                                            <i class="material-icons text-5xl hover:text-orange-600">add_box</i>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex items-center gap-5">
+                                            <img src="/img/catupiry.png" alt="" class="w-12 h-12">
+                                            <div>
+                                                <p>Adicional Catupiry</p>
+                                                <p class="text-xl text-orange-500 font-bold">R$ 5,00</p>
+                                            </div>
+                                        </div>
+                                        <!-- Botão adicionar -->
+                                        <button class="text-orange-500 bg-transparent border-0 focus:outline-none ">
+                                            <i class="material-icons text-5xl hover:text-orange-600">add_box</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="p-4">
+                            <p>Alguma observação?</p>
+                            <input placeholder="Ex: tirar a cebola..."
+                                class="border-b w-5/6 w-full mt-5 focus:outline-none focus:border-transparent"></input>
+                        </div>
+
+                        <div class="p-4">
+                            <p>Resumo do pedido:</p>
+                            <p class="border-b w-5/6 w-full mt-5">1 Pizza de batata</p>
+                        </div>
+
+                        <div class="justify-between flex flex-row p-4">
+                            <div class="flex flex-row">
+                                <p class="text-orange-500 font-bold text-2xl">Total: </p>
+                                <p class="ml-2 text-orange-500 font-bold text-2xl">R$ 40,00</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-orange-500 p-4 rounded-lg text-white text-sm focus:outline-none focus:border-transparent hover:bg-orange-600">ADICIONAR
+                                    PEDIDO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+
+    <%- include('partials/footer.ejs') %>

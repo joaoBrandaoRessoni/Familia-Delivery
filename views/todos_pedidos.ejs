@@ -1,0 +1,56 @@
+<%- include('partials/header_pedido.ejs') %>
+
+    <div class="mx-4 md:mx-[40px]">
+        <div class="flex justify-center py-5 border-b-2 flex-col items-center justify-center">
+            <h5 class="text-3xl text-orange-500 font-bold">Meus Pedidos</h5>
+        </div>
+
+        <section>
+            <div class="p-5">
+                <div class="tab-content grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex flex-row items-center justify-between p-4 border">
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="2 - Pizza Batata" class="w-full h-auto rounded-lg">
+                        </div>
+                        <!-- Descrição do pedido -->
+                        <div class="flex-1 pl-4 text-sm/8">
+                            <p class="text-lg font-bold">PEDIDO 01</p>
+                            <p>Pizza Presunto</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p> <span class="font-bold">Informações do pedido:</span> Entrega / pix</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 48,00</p>
+                        </div>
+                        <!-- Botão  -->
+                        <!-- <div class="mt-auto">
+                            <button
+                                class="flex items-center text-white bg-orange-500 border-0 focus:outline-none p-2 rounded-lg">
+                                <p>VER</p>
+                            </button>
+                        </div> -->
+                    </div>
+
+                    <div class="flex flex-row items-center justify-between p-4 border">
+                        <div>
+                            <img src="/img/pizza.jpeg" alt="2 - Pizza Batata" class="w-full h-auto rounded-lg">
+                        </div>
+                        <!-- Descrição do pedido -->
+                        <div class="flex-1 pl-4 text-sm/8">
+                            <p class="text-lg font-bold">PEDIDO 02</p>
+                            <p>Pizza Presunto</p>
+                            <p>Presunto, mussarela, orégano, molho, cebola</p>
+                            <p> <span class="font-bold">Informações do pedido:</span> Entrega / pix</p>
+                            <p class="text-lg text-orange-500 font-bold">R$ 48,00</p>
+                        </div>
+                        <!-- Botão  -->
+                        <!-- <div class="mt-auto">
+                            <button
+                                class="flex items-center text-white bg-orange-500 border-0 focus:outline-none p-2 rounded-lg">
+                                <p>VER</p>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+
+        </section>
+
+        <%- include('partials/footer.ejs') %>

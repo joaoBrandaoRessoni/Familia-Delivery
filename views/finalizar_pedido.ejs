@@ -1,0 +1,140 @@
+<%- include('partials/header_pedido.ejs') %>
+
+    <main>
+
+        <div class="mx-4 md:mx-[40px]">
+            <div class="flex justify-center py-5 border-b-2 flex-col items-center justify-center">
+                <h5 class="text-3xl text-orange-500 font-bold">Pedido 01</h5>
+            </div>
+
+            <section class="flex justify-center items-center p-5 w-full  md:w-1/2  mx-auto">
+                <div class="w-full">
+                    <div class="tab-content grid grid-cols-1 gap-4 border rounded-lg w-full shadow-xl">
+                        <div>
+                            <div class="flex flex-row items-center justify-center p-4 border-b">
+                                <!-- Imagem -->
+                                <div class="w-40 md:w-48">
+                                    <img src="/img/pizza.jpeg" alt="2 - Pizza Batata" class="w-full h-auto rounded-lg">
+                                </div>
+                                <!-- Descrição e preço -->
+                                <div class="flex-1 text-center md:text-left pl-4 eading-normal md:leading-[3]">
+
+                                    <p class="text-xl font-bold">02 - Pizza Batata</p>
+                                    <p>Presunto, mussarela, orégano, molho, cebola</p>
+                                    <p class="text-xl text-orange-500 font-bold">R$ 40,00</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="p-4">
+                            <p>OBSERVAÇÃO:</p>
+                            <input placeholder="Ex: tirar a cebola..."
+                                class="border-b w-5/6 w-full mt-5 focus:outline-none focus:border-transparent"></input>
+                        </div>
+
+                        <div class="p-4">
+                            <p>RESUMO DO PEDIDO:</p>
+                            <p class="border-b w-5/6 w-full mt-5">1 Pizza de batata</p>
+                        </div>
+
+                        <div class="p-4">
+                            <p>FORMA DE PAGAMENTO</p>
+                            <div class="py-4">
+                                <select id="formaPagamento"
+                                    class="border p-2 rounded-lg text-gray-700 focus:outline-none focus:border-transparent">
+                                    <option value="credito">Cartão de crédito</option>
+                                    <option value="debito">Cartão de débito</option>
+                                    <option value="pix">Pix</option>
+                                    <option value="dinheiro">Dinheiro</option>
+                                </select>
+                            </div>
+
+                            <!-- Input para troco (inicialmente oculto) -->
+                            <div id="trocoContainer" class="hidden mt-2">
+                                <label for="troco" class="mb-2">Precisa de troco? Informe o valor:</label>
+                                <input type="number" id="troco" class="border p-2 rounded-lg w-full mt-1"
+                                    placeholder="Ex: 50,00">
+                            </div>
+                        </div>
+
+
+                        <div class="p-4">
+                            <p>ENTREGA</p>
+                            <div class="py-4">
+                                <input type="radio" id="retirar" name="grupo" class="form-radio text-orange-500"
+                                    checked>
+                                <label for="retirar" class="pr-8">Retirar no local</label>
+
+                                <input type="radio" id="entregar" name="grupo" class="form-radio text-orange-500">
+                                <label for="entregar">Entregar</label>
+
+                                <p class="text-xs font-bold mt-2">*Taxa de entrega R$8,00</p>
+                            </div>
+
+                            <!-- Formulário de entrega (inicialmente oculto) -->
+                            <div id="enderecoContainer" class="hidden mt-4 ">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" id="endereco" class="border p-2 rounded-lg w-full mt-2 mb-5"
+                                    placeholder="Ex: Rua das Flores, 600" required>
+
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" id="bairro" class="border p-2 rounded-lg w-full mt-2 mb-5"
+                                    placeholder="Ex: Centro" required>
+
+                                <label for="referencia">Ponto de Referência:</label>
+                                <input type="text" id="referencia" class="border p-2 rounded-lg w-full mt-2 mb-5"
+                                    placeholder="Ex: Em frente a uma praça">
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="justify-between flex flex-row p-4 items-center justify-center">
+                            <div class="flex flex-row">
+                                <p class="text-orange-500 font-bold text-2xl">TOTAL: </p>
+                                <p class="ml-2 text-orange-500 font-bold text-2xl">R$ 40,00</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-orange-500 p-4 rounded-lg text-white text-sm focus:outline-none focus:border-transparent hover:bg-orange-600">ENVIAR
+                                    PEDIDO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- Caso seja escolhido dinheiro, informar se precisa de troco -->
+        <script>
+            document.getElementById("formaPagamento").addEventListener("change", function () {
+                const trocoContainer = document.getElementById("trocoContainer");
+
+                // Verifica se "Dinheiro" foi selecionado
+                if (this.value === "dinheiro") {
+                    trocoContainer.classList.remove("hidden");
+                } else {
+                    trocoContainer.classList.add("hidden");
+                }
+            });
+        </script>
+
+        <!-- Se "Entregar" for escolhido, exibe o formulário de endereço -->
+        <script>
+            document.querySelectorAll('input[name="grupo"]').forEach((radio) => {
+                radio.addEventListener("change", function () {
+                    if (document.getElementById("entregar").checked) {
+                        enderecoContainer.classList.remove("hidden");
+                    } else {
+                        enderecoContainer.classList.add("hidden");
+                    }
+                })
+            })
+
+        </script>
+    </main>
+
+
+    <%- include('partials/footer.ejs') %>
